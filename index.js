@@ -3,6 +3,9 @@ var apiRoutes = require("./api/routes");
 
 var app = express();
 
+// GET /style.css etc
+app.use(express.static(__dirname + '/public'));
+
 apiRoutes(app);
 
 app.get('/', function(req, res){
